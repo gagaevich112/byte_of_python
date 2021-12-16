@@ -1,0 +1,186 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/share/memory/allocation.cpp:46), pid=57580, tid=60180
+#
+# JRE version:  (11.0.12+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.12+7-b1504.40, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: com.intellij.util.ReadEnv C:\Users\Gagaev\AppData\Local\Temp\intellij-cmd-env.16850142928901561560.tmp
+
+Host: Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+Time: Wed Dec 15 16:20:03 2021 RTZ 2 (зима) elapsed time: 0.012089 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001b697fe0000):  JavaThread "Unknown thread" [_thread_in_vm, id=60180, stack(0x0000002393b00000,0x0000002393c00000)]
+
+Stack: [0x0000002393b00000,0x0000002393c00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5ff40a]
+V  [jvm.dll+0x783b65]
+V  [jvm.dll+0x78517d]
+V  [jvm.dll+0x785833]
+V  [jvm.dll+0x249408]
+V  [jvm.dll+0xb8804]
+V  [jvm.dll+0x2ea187]
+V  [jvm.dll+0x2e318a]
+V  [jvm.dll+0x761f57]
+V  [jvm.dll+0x76374c]
+V  [jvm.dll+0x362ab9]
+V  [jvm.dll+0x7455be]
+V  [jvm.dll+0x3cb673]
+V  [jvm.dll+0x3cda21]
+C  [jli.dll+0x536b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001b695e10310, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001b697ff8800 GCTaskThread "GC Thread#0" [stack: 0x0000002393c00000,0x0000002393d00000] [id=13916]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff93d12f560]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001b697fde220] Heap_lock - owner thread: 0x000001b697fe0000
+
+Heap address: 0x0000000703400000, size: 4044 MB, Compressed Oops mode: Non-zero based: 0x0000000703400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.007 Loaded shared library C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff768240000 - 0x00007ff76824a000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\java.exe
+0x00007ff994cb0000 - 0x00007ff994ea5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9582e0000 - 0x00007ff9582f6000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ff9933a0000 - 0x00007ff99345e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9924d0000 - 0x00007ff992798000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff992a40000 - 0x00007ff992b40000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff96e510000 - 0x00007ff96e529000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\jli.dll
+0x00007ff96e330000 - 0x00007ff96e347000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\VCRUNTIME140.dll
+0x00007ff993eb0000 - 0x00007ff994051000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff992b40000 - 0x00007ff992b62000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9730c0000 - 0x00007ff97335a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff993170000 - 0x00007ff99319b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9930c0000 - 0x00007ff99315e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9927a0000 - 0x00007ff9928ab000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff992c60000 - 0x00007ff992cfd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff9941a0000 - 0x00007ff9941d0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff955b40000 - 0x00007ff955bdd000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\msvcp140.dll
+0x00007ff93ce40000 - 0x00007ff93d998000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\server\jvm.dll
+0x00007ff9931a0000 - 0x00007ff99324c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff993670000 - 0x00007ff99370b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff993cc0000 - 0x00007ff993dea000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff993ea0000 - 0x00007ff993ea8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff972220000 - 0x00007ff972229000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff973520000 - 0x00007ff973547000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9911a0000 - 0x00007ff9911aa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff993600000 - 0x00007ff99366b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff990980000 - 0x00007ff990992000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff986ee0000 - 0x00007ff986ef1000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\verify.dll
+0x00007ff98f900000 - 0x00007ff98fae4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff9781b0000 - 0x00007ff9781dc000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff992bd0000 - 0x00007ff992c53000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff9781e0000 - 0x00007ff978209000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\java.dll
+0x00007ff989bb0000 - 0x00007ff989bbb000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\jimage.dll
+0x00007ff979490000 - 0x00007ff9794a8000 	C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\jbr\bin\server
+
+VM Arguments:
+java_command: com.intellij.util.ReadEnv C:\Users\Gagaev\AppData\Local\Temp\intellij-cmd-env.16850142928901561560.tmp
+java_class_path (initial): C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.4\lib\util.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4240441344                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\byte_of_python\byte\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ChromeDriver;C:\Program Files\Git\cmd;C:\Users\Gagaev\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Gagaev\AppData\Local\Programs\Python\Python310\;C:\Users\Gagaev\AppData\Local\Microsoft\WindowsApps;C:\ChromeDriver;
+USERNAME=Gagaev
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+OS uptime: 9 days 0:17 hours
+Hyper-V role detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 12 microcode 0xde, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16169M (4862M free)
+TotalPageFile size 39516M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 54M, peak: 55M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.12+7-b1504.40) for windows-amd64 JRE (11.0.12+7-b1504.40), built on Sep 23 2021 14:38:03 by "" with MS VC++ 14.0 (VS2015)
+
+END.
